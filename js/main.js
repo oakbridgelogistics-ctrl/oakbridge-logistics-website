@@ -36,6 +36,7 @@ function initContactForm() {
   var form = document.getElementById('contact-form');
   if (!form) return;
 
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact@oakbridge-logistics.com';
   var status = document.getElementById('form-status');
 
   var validators = {
@@ -103,13 +104,36 @@ function initContactForm() {
       return;
     }
 
-    // No backend is connected yet. This confirms the message locally and
-    // resets the form so the site can be dropped onto any static host and
-    // wired up to a form service or mail handler later.
-    status.textContent = 'Thank you, ' + form.elements['name'].value.trim().split(' ')[0] +
-      '. Your message has been received — our team will reach out within one business day.';
-    status.className = 'form-status visible success';
-    status.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    form.reset();
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var firstName = form.elements['name'].value.trim().split(' ')[0];
+    var originalBtnText = submitBtn.textContent;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Form submission failed');
+        return response.json();
+      })
+      .then(function () {
+        status.textContent = 'Thank you, ' + firstName +
+          '. Your message has been received — our team will reach out within one business day.';
+        status.className = 'form-status visible success';
+        form.reset();
+      })
+      .catch(function () {
+        status.textContent = 'Something went wrong sending your message. Please try again, or email us directly at contact@oakbridge-logistics.com.';
+        status.className = 'form-status visible error';
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+        status.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
   });
 }

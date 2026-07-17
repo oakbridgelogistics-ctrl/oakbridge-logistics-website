@@ -53,6 +53,11 @@
           <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
 
           <form id="contact-form" novalidate>
+            <!-- FormSubmit.co delivers submissions to contact@oakbridge-logistics.com by email -->
+            <input type="hidden" name="_subject" value="New message from the OakBridge Logistics website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
             <div class="form-grid">
               <div class="form-field full">
                 <label for="name">Full Name</label>

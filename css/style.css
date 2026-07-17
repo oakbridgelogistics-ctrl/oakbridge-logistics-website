@@ -100,15 +100,16 @@ p { margin: 0 0 1em; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 112px;
+  min-height: 152px;
+  max-width: 1320px;
 }
 .brand {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
 }
 .brand img {
-  height: 80px;
+  height: 120px;
   width: auto;
 }
 .brand-name {
@@ -593,18 +594,13 @@ section { padding: 80px 0; }
 /* ==========================================================================
    Responsive
    ========================================================================== */
-@media (max-width: 900px) {
-  .grid-4 { grid-template-columns: repeat(2, 1fr); }
-  .grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .two-col { grid-template-columns: 1fr; gap: 36px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .value-list { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 720px) {
+/* Nav switches to the hamburger menu earlier than the content breakpoints
+   below — the larger logo needs more breathing room, and this avoids an
+   awkward squeeze zone where desktop nav links start wrapping. */
+@media (max-width: 1260px) {
   .main-nav {
     position: fixed;
-    top: 112px;
+    top: 152px;
     left: 0;
     right: 0;
     background: var(--color-surface);
@@ -629,7 +625,17 @@ section { padding: 80px 0; }
   .main-nav a { padding: 12px 14px; }
   .main-nav .btn { margin-left: 0; margin-top: 8px; text-align: center; }
   .nav-toggle { display: flex; }
+}
 
+@media (max-width: 900px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .two-col { grid-template-columns: 1fr; gap: 36px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .value-list { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   section { padding: 56px 0; }
   .hero .container { padding-top: 56px; padding-bottom: 56px; }
@@ -644,10 +650,10 @@ section { padding: 80px 0; }
 }
 
 @media (max-width: 480px) {
-  .site-header .container { min-height: 92px; }
-  .main-nav { top: 92px; }
+  .site-header .container { min-height: 138px; }
+  .main-nav { top: 138px; }
   .brand-name { font-size: 1.08rem; }
-  .brand img { height: 64px; }
+  .brand img { height: 96px; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions .btn { text-align: center; }
 }

@@ -117,8 +117,16 @@ function initContactForm() {
       body: new FormData(form)
     })
       .then(function (response) {
-        if (!response.ok) throw new Error('Form submission failed');
-        return response.json();
+        return response.json().then(function (data) {
+          // FormSubmit returns HTTP 200 even when a submission fails or the
+          // endpoint still needs one-time activation — the real result is
+          // in the JSON body, not the status code.
+          if (!response.ok || String(data.success) !== 'true') {
+            console.error('FormSubmit rejected the submission:', data && data.message);
+            throw new Error(data && data.message ? data.message : 'Form submission failed');
+          }
+          return data;
+        });
       })
       .then(function () {
         status.textContent = 'Thank you, ' + firstName +

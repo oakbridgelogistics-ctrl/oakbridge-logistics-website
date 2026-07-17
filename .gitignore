@@ -1,0 +1,12 @@
+# Sensitive / non-website business documents — never commit
+Invoicing/
+Legal Paperwork/
+
+# Unused source photo dump (stock-site screenshots, AI mockups — not used on the site)
+Photos/
+
+# OS junk
+.DS_Store
+
+# Local tooling config
+.claude/

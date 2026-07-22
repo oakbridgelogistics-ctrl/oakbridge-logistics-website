@@ -39,21 +39,48 @@ function initContactForm() {
   var FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact@oakbridge-logistics.com';
   var status = document.getElementById('form-status');
 
+  var MESSAGES = {
+    en: {
+      nameRequired: 'Please enter your full name.',
+      emailInvalid: 'Please enter a valid email address.',
+      phoneInvalid: 'Please enter a valid phone number.',
+      messageTooShort: 'Please share a few details so we can help (10+ characters).',
+      fixFields: 'Please correct the highlighted fields and try again.',
+      sending: 'Sending…',
+      successPrefix: 'Thank you, ',
+      successSuffix: '. Your message has been received — our team will reach out within one business day.',
+      error: 'Something went wrong sending your message. Please try again, or email us directly at contact@oakbridge-logistics.com.'
+    },
+    es: {
+      nameRequired: 'Por favor ingrese su nombre completo.',
+      emailInvalid: 'Por favor ingrese un correo electrónico válido.',
+      phoneInvalid: 'Por favor ingrese un número de teléfono válido.',
+      messageTooShort: 'Por favor comparta más detalles para poder ayudarle (mínimo 10 caracteres).',
+      fixFields: 'Por favor corrija los campos resaltados e intente de nuevo.',
+      sending: 'Enviando…',
+      successPrefix: 'Gracias, ',
+      successSuffix: '. Hemos recibido su mensaje — nuestro equipo se comunicará con usted dentro de un día hábil.',
+      error: 'Hubo un problema al enviar su mensaje. Por favor intente de nuevo, o escríbanos directamente a contact@oakbridge-logistics.com.'
+    }
+  };
+  var lang = (document.documentElement.lang || 'en').slice(0, 2);
+  var t = MESSAGES[lang] || MESSAGES.en;
+
   var validators = {
     name: function (v) {
-      return v.trim().length >= 2 ? '' : 'Please enter your full name.';
+      return v.trim().length >= 2 ? '' : t.nameRequired;
     },
     email: function (v) {
       var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return pattern.test(v.trim()) ? '' : 'Please enter a valid email address.';
+      return pattern.test(v.trim()) ? '' : t.emailInvalid;
     },
     phone: function (v) {
       if (!v.trim()) return ''; // optional field
       var digits = v.replace(/\D/g, '');
-      return digits.length >= 10 ? '' : 'Please enter a valid phone number.';
+      return digits.length >= 10 ? '' : t.phoneInvalid;
     },
     message: function (v) {
-      return v.trim().length >= 10 ? '' : 'Please share a few details so we can help (10+ characters).';
+      return v.trim().length >= 10 ? '' : t.messageTooShort;
     }
   };
 
@@ -98,7 +125,7 @@ function initContactForm() {
     });
 
     if (!isValid) {
-      status.textContent = 'Please correct the highlighted fields and try again.';
+      status.textContent = t.fixFields;
       status.className = 'form-status visible error';
       status.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       return;
@@ -109,7 +136,7 @@ function initContactForm() {
     var originalBtnText = submitBtn.textContent;
 
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
+    submitBtn.textContent = t.sending;
 
     fetch(FORM_ENDPOINT, {
       method: 'POST',
@@ -129,13 +156,12 @@ function initContactForm() {
         });
       })
       .then(function () {
-        status.textContent = 'Thank you, ' + firstName +
-          '. Your message has been received — our team will reach out within one business day.';
+        status.textContent = t.successPrefix + firstName + t.successSuffix;
         status.className = 'form-status visible success';
         form.reset();
       })
       .catch(function () {
-        status.textContent = 'Something went wrong sending your message. Please try again, or email us directly at contact@oakbridge-logistics.com.';
+        status.textContent = t.error;
         status.className = 'form-status visible error';
       })
       .finally(function () {

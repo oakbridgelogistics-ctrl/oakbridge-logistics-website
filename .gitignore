@@ -5,6 +5,9 @@ Legal Paperwork/
 # Unused source photo dump (stock-site screenshots, AI mockups — not used on the site)
 Photos/
 
+# Print production files — not part of the public website
+Business Card/
+
 # OS junk
 .DS_Store
 

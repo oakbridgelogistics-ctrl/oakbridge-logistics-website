@@ -1,32 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://oakbridge-logistics.com/</loc>
-    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oakbridge-logistics.com/"/>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://oakbridge-logistics.com/services.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/servicios.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oakbridge-logistics.com/services.html"/>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oakbridge-logistics.com/how-it-works.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/how-it-works.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/como-funciona.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oakbridge-logistics.com/how-it-works.html"/>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://oakbridge-logistics.com/about.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/sobre-nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oakbridge-logistics.com/about.html"/>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://oakbridge-logistics.com/contact.html</loc>
-    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oakbridge-logistics.com/contact.html"/>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://oakbridge-logistics.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oakbridge-logistics.com/"/>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://oakbridge-logistics.com/es/servicios.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/servicios.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oakbridge-logistics.com/services.html"/>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oakbridge-logistics.com/es/como-funciona.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/how-it-works.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/como-funciona.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oakbridge-logistics.com/how-it-works.html"/>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://oakbridge-logistics.com/es/sobre-nosotros.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/sobre-nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oakbridge-logistics.com/about.html"/>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://oakbridge-logistics.com/es/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oakbridge-logistics.com/contact.html"/>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>

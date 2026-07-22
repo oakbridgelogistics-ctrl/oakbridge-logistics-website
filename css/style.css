@@ -148,6 +148,15 @@ p { margin: 0 0 1em; }
 }
 .main-nav .btn { margin-left: 8px; }
 
+.lang-switch {
+  border: 1px solid var(--color-border) !important;
+  font-weight: 700 !important;
+  margin-left: 4px;
+}
+.lang-switch:hover {
+  border-color: var(--color-primary) !important;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -624,6 +633,7 @@ section { padding: 80px 0; }
   }
   .main-nav a { padding: 12px 14px; }
   .main-nav .btn { margin-left: 0; margin-top: 8px; text-align: center; }
+  .lang-switch { margin-left: 0; text-align: center; }
   .nav-toggle { display: flex; }
 }
 

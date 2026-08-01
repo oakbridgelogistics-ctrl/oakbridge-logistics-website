@@ -38,6 +38,15 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://oakbridge-logistics.com/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/preguntas-frecuentes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oakbridge-logistics.com/faq.html"/>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://oakbridge-logistics.com/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/contact.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/contacto.html"/>
@@ -81,6 +90,15 @@
     <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://oakbridge-logistics.com/es/preguntas-frecuentes.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://oakbridge-logistics.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://oakbridge-logistics.com/es/preguntas-frecuentes.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://oakbridge-logistics.com/faq.html"/>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://oakbridge-logistics.com/es/contacto.html</loc>

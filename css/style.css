@@ -575,6 +575,14 @@ section { padding: 80px 0; }
   color: #fff;
 }
 .site-footer p { color: #bcc7bf; font-size: 0.95rem; }
+.footer-social { display: flex; gap: 14px; margin-top: 18px; }
+.footer-social a {
+  color: #cfd8d1;
+  display: inline-flex;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+.footer-social a:hover { color: #fff; transform: translateY(-1px); }
+.footer-social svg { width: 22px; height: 22px; }
 .site-footer h4 {
   color: #fff;
   font-size: 0.95rem;

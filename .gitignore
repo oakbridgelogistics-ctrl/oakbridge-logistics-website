@@ -1,16 +1,19 @@
 # Sensitive / non-website business documents — never commit
-Invoicing/
-Legal Paperwork/
+/Invoicing/
+/Legal Paperwork/
 
 # Unused source photo dump (stock-site screenshots, AI mockups — not used on the site)
-Photos/
+/Photos/
+
+# Raw source photos — optimized, web-ready copies live in images/photos/
+/photos for website/
 
 # Print production files — not part of the public website
-Business Card/
-Senior Living Flyer/
-Contact QR Code/
-Truck Magnet/
-Facebook Page/
+/Business Card/
+/Senior Living Flyer/
+/Contact QR Code/
+/Truck Magnet/
+/Facebook Page/
 
 # OS junk
 .DS_Store

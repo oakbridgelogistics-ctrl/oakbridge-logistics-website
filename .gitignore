@@ -1,6 +1,7 @@
 # Sensitive / non-website business documents — never commit
 /Invoicing/
 /Legal Paperwork/
+/Insurance/
 
 # Unused source photo dump (stock-site screenshots, AI mockups — not used on the site)
 /Photos/
